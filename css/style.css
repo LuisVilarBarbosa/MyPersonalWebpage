@@ -1,5 +1,9 @@
-﻿* {
-	font-weight:normal;
+﻿body {
+	background-image: url('http://kingofwallpapers.com/blue/blue-014.jpg');
+}
+
+* {
+	font-weight: normal;
 }
 
 header {
@@ -7,7 +11,7 @@ header {
 }
 
 .left {
-	float:left;
+	float: left;
 }
 
 .right {
