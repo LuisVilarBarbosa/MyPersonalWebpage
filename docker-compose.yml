@@ -5,7 +5,8 @@ services:
     build: ./apache
     volumes:
       - ./apache/public_html:/var/www/html
-    #environment:
+    environment:
+      PORT: 80
       #DATABASE_URL:
     ports:
       - "80:80"
