@@ -4,8 +4,8 @@
 	} else {
 		$uri = 'http://';
 	}
-	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'/start_page.php');
+	$uri .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	header('Location: '.$uri.'start_page.php');
 	exit;
 ?>
 Something is wrong with the server.
