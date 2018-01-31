@@ -24,7 +24,8 @@ RUN echo "" > /etc/apache2/mods-enabled/mpm_event.load # Creates an empty file t
 
 RUN sed -i "s/Require local/Allow from all/g" /etc/apache2/conf-available/phppgadmin.conf
 
-EXPOSE $PORT # $PORT is an environment variable necessary to execute on the Heroku platform.
+# $PORT is an environment variable necessary to execute on the Heroku platform.
+EXPOSE $PORT
 
 CMD sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf \
 && /usr/sbin/apache2ctl -D FOREGROUND
