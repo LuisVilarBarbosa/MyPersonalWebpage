@@ -14,8 +14,7 @@ RUN apt-get update \
  libapache2-mod-php\
  php-mcrypt\
  php-pgsql\
- php-geoip\
- phppgadmin \
+ php-geoip \
 && apt-get autoremove \
 && apt-get autoclean \
 && rm -rf /var/lib/apt/lists/*
@@ -26,8 +25,6 @@ RUN echo "" > /etc/apache2/mods-enabled/mpm_event.load # Creates an empty file t
 RUN wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz \
 && gunzip GeoLiteCity.dat.gz \
 && mv -v GeoLiteCity.dat /usr/share/GeoIP/GeoIPCity.dat
-
-RUN sed -i "s/Require local/Allow from all/g" /etc/apache2/conf-available/phppgadmin.conf
 
 # $PORT is an environment variable necessary to execute on the Heroku platform.
 EXPOSE $PORT

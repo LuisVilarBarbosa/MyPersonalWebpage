@@ -11,7 +11,6 @@
 			<a href="start_page.php">Start page</a>
 		</div>
 		<div class="right">
-			<a href="../phppgadmin">phpPgAdmin</a>
 			<a href="client_info_page.php">Your info</a>
 			<a href="client_location_page.php">Location</a>
 		</div>
