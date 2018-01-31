@@ -2,21 +2,10 @@ version: '3.3'
 
 services:
   apache:
-    build: ./apache
+    build: .
     volumes:
-      - ./apache/public_html:/var/www/html
+      - .
     environment:
       PORT: 80
-      #DATABASE_URL:
     ports:
       - "80:80"
-    #depends_on:
-      #- postgres
-  postgres:
-    build: ./postgres
-    environment: 
-      POSTGRES_DB: db_name # FIX ME
-      POSTGRES_USER: username # FIX ME
-      POSTGRES_PASSWORD: password # FIX ME
-    ports:
-      - "5432:5432"

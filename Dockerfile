@@ -3,7 +3,7 @@ MAINTAINER Luis Barbosa v3
 
 WORKDIR /usr/src/app
 
-COPY public_html/ /var/www/html/
+COPY . /var/www/html/
 
 RUN apt-get update \
 && apt-get -y dist-upgrade \
