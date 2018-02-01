@@ -1,0 +1,28 @@
+﻿body {
+	background-color: LightSkyBlue;
+}
+
+* {
+	font-weight: normal;
+}
+
+header {
+	display: inline;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+section {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.client_location .extra_data {
+	margin-top: 3em;
+}
