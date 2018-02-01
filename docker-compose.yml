@@ -1,11 +1,12 @@
 version: '3.3'
 
 services:
-  apache:
+  node:
     build: .
     volumes:
-      - .:/var/www/html
+      - .:/usr/src/app
     environment:
       PORT: 80
+      NODE_ENV: development
     ports:
       - "80:80"

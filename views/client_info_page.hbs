@@ -1,0 +1,13 @@
+﻿{{> header }}
+<header>
+	<h3>Client info:</h3>
+</header>
+
+<section class="client_info">
+	{{#each info}}
+		<p>{{@key}} => {{this}}</p>
+	{{/each}}
+
+	<h5>None of this data is kept by the server. This is just indicative about the data that the server receives from a client.</h5>
+</section>
+{{> footer }}

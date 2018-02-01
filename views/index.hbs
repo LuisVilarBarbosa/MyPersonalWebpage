@@ -1,16 +1,12 @@
-﻿<?php
-	$github = 'https://www.github.com/LuisVilarBarbosa';
-	$github_webpage = 'https://luisvilarbarbosa.github.io/';
-?>
-
+﻿{{> header }}
 <section id="introduction">
 	Hi! Welcome to Luís Barbosa's page.<br />
 	I am a student of the Master in Informatics and Computing Engineering at Faculdade de Engenharia da Universidade do Porto.
 </section>
 
 <section id="github">
-	My GitHub profile: <a href=<?=$github?>><?=$github?></a><br />
-	My GitHub webpage: <a href=<?=$github_webpage?>><?=$github_webpage?></a>
+	My GitHub profile: <a href={{github}}>{{github}}</a><br />
+	My GitHub webpage: <a href={{github_webpage}}>{{github_webpage}}</a>
 </section>
 
 <section id="projects">
@@ -29,4 +25,4 @@
 	<a href="https://ngrok.com/">ngrok - Secure tunnels to localhost</a><br />
 	<a href="https://localtunnel.github.io/www/">localtunnel - Expose yourself to the world</a>
 </section>
-
+{{> footer }}
