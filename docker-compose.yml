@@ -1,22 +1,12 @@
 version: '3.3'
 
 services:
-  apache:
-    build: ./apache
+  node:
+    build: .
     volumes:
-      - ./apache/public_html:/var/www/html
+      - .:/usr/src/app
     environment:
       PORT: 80
-      #DATABASE_URL:
+      NODE_ENV: development
     ports:
       - "80:80"
-    #depends_on:
-      #- postgres
-  postgres:
-    build: ./postgres
-    environment: 
-      POSTGRES_DB: db_name # FIX ME
-      POSTGRES_USER: username # FIX ME
-      POSTGRES_PASSWORD: password # FIX ME
-    ports:
-      - "5432:5432"
