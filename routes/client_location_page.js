@@ -12,8 +12,12 @@ router.get('/', (req, res) => {
 			res.end('An error occurred loading this page.');
 		}
 		else {
-			const city = result.attributes['city'];
 			const details = result.attributes;
+			for(key in details) {
+				if(details[key] == '')
+					details[key] = 'Unknown';
+			}
+			const city = details['city'];
 			res.render('client_location_page', { ip: clientIp, ip_city: city, ip_details: details } );
 		}
 	});

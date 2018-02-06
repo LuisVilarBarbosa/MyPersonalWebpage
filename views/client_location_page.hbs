@@ -7,12 +7,10 @@
 	<p>Your IP address: {{ip}}</p>
 	<p>Your location (city): {{ip_city}}</p>
 	
-	{{#if ip_city}}
-		<p class="extra_data">More data: </p>
-		{{#each ip_details}}
-			<p>{{@key}} => {{this}}</p>
-		{{/each}}
-	{{/if}}
+	<p class="extra_data">More data: </p>
+	{{#each ip_details}}
+		<p>{{@key}}: {{this}}</p>
+	{{/each}}
 
 	<h5>None of this data is kept by the server. This is just indicative about the data that is possible to get from a client.</h5>
 </section>
