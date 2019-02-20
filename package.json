@@ -12,7 +12,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "hbs": "^4.0.2",
-    "node-where": "^1.1.0",
+    "iplocation": "^6.1.0",
     "nodemon": "^1.18.10",
     "path": "^0.12.7",
     "request-ip": "^2.0.2"

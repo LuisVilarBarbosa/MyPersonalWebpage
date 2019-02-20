@@ -1,20 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const requestIp = require('request-ip');
-const where = require('node-where');
+const iplocation = require("iplocation").default;
 
 router.get('/', (req, res) => {
 	const reqClientIp = requestIp.getClientIp(req);
 	const clientIp = reqClientIp.substr(reqClientIp.lastIndexOf(':') + 1);
-	where.is(clientIp, function(err, result) {
+	iplocation(clientIp, [], (err, result) => {
 		if(err) {
 			console.error(err);
 			res.end('An error occurred loading this page.');
 		}
 		else {
-			const details = result.attributes;
+			const details = result;
 			for(key in details) {
-				if(details[key] == '')
+				if(details[key] == null || details[key] == '')
 					details[key] = 'Unknown';
 			}
 			const city = details['city'];
